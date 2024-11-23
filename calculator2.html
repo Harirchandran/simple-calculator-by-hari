@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator by hari</title>
+    <style>
+        #div1{
+            background-color: black;
+            height: 520px;
+            width: 500px;
+        }
+        #display {
+            width: 450px;
+            height: 70px;
+            padding: 10px;
+            font-size: 30px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            outline: none;
+            margin: 20px;
+            text-align: right;
+        }
+        #butt{
+            background-color: #e2e2e2; 
+            color: rgb(0, 0, 0);              
+            border: none;               
+            padding: 10px 20px;       
+            font-size: 30px;            
+            font-weight: bold;         
+            border-radius: 5px;        
+            cursor: pointer;           
+            
+            height: 70px;
+            width: 90px;
+            margin: 10px;
+        }
+
+        
+            
+        
+        h2{
+            color: #d2c506;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 0%;
+        }
+        #div2{
+            margin-left: 20px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+    <form>
+        <h2>Simple caluculator</h2>
+        <input type="text" placeholder="0" id="display" readonly><br>
+        <div id="div2"> 
+        <input type="button" value="1" id="butt" onclick="one()">
+        <input type="button" value="2" id="butt" onclick="two()">
+        <input type="button" value="3" id="butt" onclick="three()">
+        <input type="button" value="+" id="butt" onclick="add()"><br>
+        <input type="button" value="4" id="butt" onclick="four()">
+        <input type="button" value="5" id="butt" onclick="five()">
+        <input type="button" value="6" id="butt" onclick="six()">
+        <input type="button" value="-" id="butt" onclick="sub()"><br>
+        <input type="button" value="7" id="butt" onclick="seven()">
+        <input type="button" value="8" id="butt" onclick="eight()">
+        <input type="button" value="9" id="butt" onclick="nine()">
+        <input type="button" value="x" id="butt" onclick="mult()"><br>
+        <input type="reset" value="c" id="butt" onclick="clear()">
+        <input type="button" value="0" id="butt" onclick="zero()">
+        <input type="button" value="/" id="butt" onclick="divide()">
+        <input type="button" value="=" id="butt" onclick="equal()">
+    </div>
+
+    </form>
+    </div>
+    <script>
+        function one(){
+            document.getElementById("display").value+=1;
+        }
+        function two(){
+            document.getElementById("display").value+=2;
+        }
+        function three(){
+            document.getElementById("display").value+=3;
+        }
+        function four(){
+            document.getElementById("display").value+=4;
+        }
+        function five(){
+            document.getElementById("display").value+=5;
+        }
+        function six(){
+            document.getElementById("display").value+=6;
+        }
+        function seven(){
+            document.getElementById("display").value+=7;
+        }
+        function eight(){
+            document.getElementById("display").value+=8;
+        }
+        function nine(){
+            document.getElementById("display").value+=9;
+        }
+        function zero(){
+            document.getElementById("display").value+=0;
+        }
+        function add(){
+            document.getElementById("display").value+="+";
+        }
+        function sub(){
+            document.getElementById("display").value+="-";
+        }
+        function mult(){
+            document.getElementById("display").value+="*";
+        }
+        function divide(){
+            document.getElementById("display").value+="/";
+        }
+        function equal(){
+           try{
+            let result=eval(document.getElementById("display").value);
+            document.getElementById("display").value=result;
+           }catch(error){
+            document.getElementById("display").value="Hari said syntax error"
+           }
+           
+            
+        }
+        
+
+    </script>
+</body>
+</html>
